@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ivan Andres Herrera Pertuz">
+    <title>Wrong Skill: League of Legends</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/assets/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="../static/assets/css/cover.css" rel="stylesheet">
+
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark" background="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ornn_0.jpg"  style="background-repeat:round; background-color: black;">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+            <h3 class="float-md-start mb-0" style="text-shadow: 2px 2px 2px black;">Wrong Skill</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link active" aria-current="page" href="/"><ion-icon name="home-outline"></ion-icon> Home</a>
+                <a class="nav-link" href="#"><ion-icon name="people-outline"></ion-icon> About</a>
+                <a class="nav-link" href="#"><ion-icon name="diamond"></ion-icon> Donation</a>
+            </nav>
+            </div>
+        </header>
+
+        <main class="px-3">
+            <p class="lead" style="text-shadow: 2px 2px 2px black;">Good luck!</p>
+
+            <div class="card text-white bg-dark mb-3">
+                <div class="row p-2">
+                    <div class="col">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{ nameChamp1 }}_0.jpg" width="400" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="row mx-auto ">
+                    <div class="">
+                        <p class="text-center fs-5 fw-bold">Skills</p>
+                    </div>
+                </div>
+                <div class="row row-cols-4 p-2 ">
+                    {% for url in urls %}
+                        <div class="col"><img src="{{ url }}" alt=""></div>
+                    {% endfor%}
+                </div>
+                <div class="row row-cols-4 p-2  justify-content-md-center">
+                    <div class="col"><span class="badge bg-light text-dark fs-6" style="width: 2rem;">Q</span></div>
+                    <div class="col"><span class="badge bg-light text-dark fs-6" style="width: 2rem;">W</span></div>
+                    <div class="col"><span class="badge bg-light text-dark fs-6" style="width: 2rem;">E</span></div>
+                    <div class="col"><span class="badge bg-light text-dark fs-6" style="width: 2rem;">R</span></div>
+                </div>
+                <hr>
+                <div class="row mx-auto">
+                    <div class="">
+                        <p class="text-center fs-6 fw-bold">Select the champion to which the wrong skill belongs.</p>
+                    </div>
+                </div>
+                <div class="row row-cols-3 p-2">
+                    {% for champ in fourChampions %}
+                    <div class="col"><img src="https://ddragon.leagueoflegends.com/cdn/11.9.1/img/champion/{{ champ }}.png" width="60" class="img-fluid" alt=""></div>
+                    {% endfor %}
+                </div>
+                <div class="row row-cols-3 p-2 justify-content-md-center">
+                    {% for champ in fourChampions %}
+                        <div class="col"><span class="badge bg-light text-dark fs-6" >{{ champ }}</span></div>
+                    {% endfor %}
+                </div>
+            </div>
+            <p class="lead" style="text-shadow: 2px 2px 2px black;">
+                <a href="play.html" class="btn btn-lg btn-secondary fw-bold border-warning bg-warning"><ion-icon name="checkmark-circle"></ion-icon> Confirm</a>
+            </p>
+        </main>
+
+        <footer class="mt-auto fw-lighter text-white-50">
+            <p style="text-shadow: 2px 2px 2px black;">Wrong Skill isn’t endorsed by Riot Games. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.</p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
